@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+   
+    </style>
+    <title>
+      How to get textbox value using jQuery to console.
+    </title>
+</head>
+<body>
+   <input type="text" value="Enter the text here">
+   <script>
+          $("input")
+            .keyup(function() {
+                var tvalue = $(this).val();
+                console.log(tvalue);
+            });
+    ;</script>
+</body>
+</html>

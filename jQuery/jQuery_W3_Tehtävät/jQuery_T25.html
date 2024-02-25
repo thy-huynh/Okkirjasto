@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>
+        Using form input fields with jQuery
+    </title>
+</head>
+
+<body>
+    <form id="form" action="sample.php">
+        Etunimi: <br>
+        <input type="text" name="fname" value="Thy">
+        <br>
+        Sukunimi: <br>
+        <input type="text" name="lname" value="Huynh">
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+    <p> Click the submit button to get all the form elements and their values</p>
+
+    <script>
+        $("#form").submit(function (event) {
+            event.preventDefault();
+
+            var arvot = $(this).serialize();
+            console.log(arvot);
+        });
+
+    </script>
+</body>
+</html>

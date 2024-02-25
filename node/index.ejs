@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homamin uusi blogi | <%=otsikko%></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+            <a href="/"><h1>Kotisivu</h1></a>
+            <p>Homamin sivu</p>
+        </div>
+        <ul>
+            <li><a href="/">Aloitus sivu</a></li>
+            <li><a href="/meista">Minusta</a></li>
+            <li><a href="/blogit/luo">Uusi Blogi</a></li>
+        </ul>
+    </nav>
+    <div class="blogit sisalto">
+        <h2>Kaikki Blogit</h2>
+        <% if (blogit.length > 0) { %>
+            <% blogit.forEach(bloki => { %>
+                <h3 class="otsikko"><%= bloki.otsikko %></h3>
+                <p class="ingressi"><%= bloki.ingressi %></p>
+            <% }) %>
+            <% } %>
+    </div>
+
+</body>
+</html>

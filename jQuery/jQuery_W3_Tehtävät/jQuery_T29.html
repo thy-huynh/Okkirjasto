@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>
+        Remove a specific value from an array using jQuery
+    </title>
+</head>
+
+<body>
+    <script>
+        var t = ["Sininen", " Keltainen ", " Musta", " Turkoosi", " Oranssi"];
+        var remove_Item = " Keltainen";
+
+        console.log("Table before element removal = " + t);
+
+
+        t = $.grep(t, function (value) {
+            return value != remove_Item;
+        });
+
+        console.log("The table after removing the element = " + t);   
+    </script>
+</body>
+</html>

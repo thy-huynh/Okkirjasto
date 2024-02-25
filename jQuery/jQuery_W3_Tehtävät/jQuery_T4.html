@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <title>Disable or enable the form submit button</title>
+</head>
+<body>
+    <input id="accept" name="accept" type="checkbox" value="y" />Accept<br>
+    <input id="button" disabled="disabled" name="submit" type="submit" value="Lähetä" />
+</body>
+<script>
+    $('#accept').click(function () {
+        if ($("#button").is(':disabled')) {
+            $("#button").removeAttr('disabled');
+        } else {
+            $("#button").attr('disabled', 'disabled');
+        }
+    });
+</script>
+</html>

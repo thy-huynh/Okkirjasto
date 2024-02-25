@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("tr:odd").addClass("zebra");});
+    </script>
+    <style>
+        .style {
+            width: 500px;
+            margin: 0px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            table tr td {
+                width: 50%;
+                border: 2px solid #501b1b;
+                padding: 5px;
+            }
+
+            table tr th {
+                border: 2px solid #000000;
+                padding: 5px;
+            }
+
+        .zebra {
+            background-color: #e2f145;
+        }
+    </style>
+    <meta charset="8">
+    <title>Creating a Zebra Stripes table effect</title>
+</head>
+<body>
+    <div class="style">
+        <table>
+            <tr>
+                <th>Oppilaan nimi</th>
+                <th>Pisteet</th>
+            </tr>
+            <tr>
+                <td>Thy</td>
+                <td>88.00</td>
+            </tr>
+            <tr>
+                <td>Homam</td>
+                <td>70.00</td>
+            </tr>
+            <tr>
+                <td>Panu</td>
+                <td>90.00</td>
+            </tr>
+            <tr>
+                <td>Esko</td>
+                <td>69.00</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

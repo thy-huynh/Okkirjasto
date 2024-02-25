@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="8">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style type="text/css">
+        textarea {
+            display: block;
+            margin: 2em 0;
+        }
+    </style>
+
+    <meta charset="8">
+    <title>Limit the number of characters in the text area, including the number</title>
+
+</head>
+<body>
+    <form>
+        <label>Maximum 15 characters</label>
+<textarea id="textarea" maxlength="15"></textarea>
+        <span id="marks">15</span> mark left.
+    </form>
+
+    <script>
+        var maxLength = 15;
+        $("textarea").keyup(function () {
+            var textlen = maxLength - $(this).val().length;
+            $("#marks").text(textlen);
+        });</script>
+</body>
+</html> 

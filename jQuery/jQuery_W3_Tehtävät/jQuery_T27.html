@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>
+        Converting a jQuery object to a string
+    </title>
+</head>
+
+<body>
+    <div id="eka"></div>
+
+
+    <script>
+        var element = $("<h1>", {
+            text: "jQuery",
+            class: "test"
+        });
+
+        $("#eka").text(element.get(0).outerHTML);
+
+    </script>
+</body>
+</html>

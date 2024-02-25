@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    
+    <meta charset="8">
+    <title>Bold the first word of all elements</title>
+</head>
+<body>
+    <p>PHP Exercises</p>
+    <p>Python Exercises</p>
+    <p>JavaScript Exercises</p>
+    <p>jQuery Exercises</p>
+    <script>
+        $("p").each(function () {
+            var pdata = $(this);
+            pdata.html(pdata.text().replace(/^(\S+)/, '<strong>$1</strong>'));
+        });
+</script>
+</body>
+</html>

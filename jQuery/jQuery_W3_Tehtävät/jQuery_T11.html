@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<meta charset="8">
+	<meta name="viewport" content="width=device-width">
+    <title>Create a div using jQuery with a style tag.</title>
+</head>
+<body>
+    <p>Tämä verkkotunnus on perustettu käytettäväksi havainnollistavina esimerkkeinä asiakirjoissa. Voit käyttää tätä verkkotunnusta esimerkeissä ilman edeltävää koordinointia tai luvan pyytämistä.</p>
+	<input type="button" value="Napsauta lisätäksesi uuden div elementin" onclick="div()" />
+	<script>function div() {
+            $(document).ready(function () {
+                var test = {
+                    id: "div",
+                    class: "divclass",
+                    css: {
+                        "color": "Green"
+                    }
+                };
+                var $div = $("<div>", test);
+                $div.html("Uusi div elementti");
+                $("body").append($div);
+            });
+        }</script>
+	</body>
+</html>

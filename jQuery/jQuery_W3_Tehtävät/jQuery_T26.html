@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>
+        Determining the absolute position of an element using jQuery
+    </title>
+</head>
+
+<body>
+    <form id="form" action="sample.php">
+        Etunimi: <br>
+        <input type="text" id="first" name="fname" value="Thy">
+        <br>
+        Sukunimi: <br>
+        <input type="text" id="second" name="lname" value="Huynh">
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+   
+
+    <script>
+        $(document).ready(function () {
+            var left_position = $("#first").offset().left - $(document).scrollTop();
+            console.log("Vasen: " + left_position);
+
+            var top_position = $("#second").offset().top - $(document).scrollTop();
+            console.log("Oikea: " + top_position);
+        }
+
+    </script>
+</body>
+</html>

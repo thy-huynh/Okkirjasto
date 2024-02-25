@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+
+    <meta charset="8">
+    <title>Printing a page using jQuery</title>
+</head>
+<body>
+    <div>
+        <a class="printPage" href="#">Print</a>
+    </div>
+</body>
+<script>
+    $('a.printPage').click(function () {
+        window.print();
+        return false;
+    });</script>
+</html> 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+        Uncheck all checkboxes and then add one option and select it with jQuery 
+    </title>
+</head>
+<body>
+    <select id="Colors">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+    </select>
+    <input type="button" value="Click to clear all selections" onclick="PoistaValinnat()" />
+
+    <script>
+        function PoistaValinnat() {
+            $("#Colors")
+                .empty()
+                .append('<option selected="selected" value="Black">Black</option>');
+        }
+    </script>
+</body>
+</html>

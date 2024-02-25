@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        p.center {
+            text-align: center;
+            color: blue;
+        }
+
+        p.large {
+            font-size: 200%;
+        }
+    </style>
+    <title>
+        Remove all CSS classes using jQuery
+    </title>
+</head>
+<body>
+    <p id="delete" class="center large">There are two categories of paragraphis here.</p>
+
+    <input type="button" value="Click to remove all categoriest" onclick="remove()" />
+
+    <script>
+        function remove() {
+            $("#delete").removeClass();
+        }
+    </script>
+</body>
+</html>

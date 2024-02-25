@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>
+        Checks if the object is a jQuery object.
+    </title>
+</head>
+<body>
+    <script>
+        var obj1 = { what: "A standard JS object" },
+            obj2 = $("body");
+
+        if (obj1.jquery) {
+            console.log("object is a jQuery object");
+        }
+
+        if (obj2.jquery) {
+            console.log("object two is a jQuery object");
+        }
+    </script>
+</body>
+</html>

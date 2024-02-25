@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            margin: 10px 0;
+            padding: 0 5px;
+            font-size: 2em;
+            border: 2px double green;
+        }
+    </style>
+    <title>
+        Distinguish between left and right mouse clicks using jQuery
+    </title>
+</head>
+<body>
+    <h1 class="element">jQuery exercise 20</h1>
+
+    <script>
+        $(document).on("contextmenu", ".element", function (e) {
+            console.log("Right mouse clicked!");
+
+            return false;
+        });
+
+        $(document).on("click", ".element", function () {
+            console.log("Left mouse clicked!");
+        });
+    </script>
+</body>
+</html>

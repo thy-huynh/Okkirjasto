@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        p span {
+            text-decoration: underline;
+        }
+    </style>
+    <title>
+        Underline all words in text using jQuery
+    </title>
+</head>
+<body>
+    <p>The best way to learn anything is through practice and practice questions. Starting with basic exercises and then moving on to more complex exercises.</p>
+    <script>
+        $('p').each(function () {
+
+            var text_words = $(this).text().split(' ');
+
+            $(this).empty().html(function () {
+
+                for (i = 0; i < text_words.length; i++)
+                {
+                    if (i === 0) {
+                        $(this).append('<span>' + text_words[i] + '</span>');
+                    }
+
+                    else {
+                        $(this).append(' <span>' + text_words[i] + '</span>');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

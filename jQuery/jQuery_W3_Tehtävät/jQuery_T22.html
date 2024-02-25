@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <meta charset="8">
+    <meta name="viewport" content="width=device-width">
+   
+    <title>
+        Detect keystroke Enter key press using jQuery
+    </title>
+</head>
+<body>
+    <p>Enter the value in the text box and press the Enter key</p>
+    <form>
+        <input type="text" id="enter"></p>
+    </form>
+
+    <script>
+        $(document).keypress(function (e) {
+            if (e.which == 13) {
+                console.log("You pressed the enter key");}
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	
+	<meta charset="8">
+	<title>Testi onko jQuery asennettu</title>
+</head>
+<body>
+	<p>Click here</p>
+
+	<script>
+        $("p").bind("click", function () {
+            $("body").append("One click solution");
+        });
+
+        $("p").bind("dblclick", function () {
+            $("body").append("Two click solution");
+        });
+	</script>
+</body>
+
+</html> 
